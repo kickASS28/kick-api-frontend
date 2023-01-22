@@ -1,1 +1,1 @@
-export const url = "https://kick-api.herokuapp.com/";
+export const url = "https://kick-api.onrender.com/";
