@@ -9,7 +9,9 @@ const Colors = () => {
 
   useEffect(() => {
     const fetchColors = async () => {
-      const response = await axios.get("/api/colors");
+      const response = await axios.get(
+        "https://kick-api.onrender.com/api/colors"
+      );
       const data = await JSON.stringify(response.data, null, 2);
       setColors(data);
     };
@@ -18,7 +20,9 @@ const Colors = () => {
 
   useEffect(() => {
     const fetchSingleColor = async () => {
-      const response = await axios.get("/api/colors/blue");
+      const response = await axios.get(
+        "https://kick-api.onrender.com/api/colors/blue"
+      );
       const data = await JSON.stringify(response.data, null, 2);
       setSingleColor(data);
     };
@@ -34,7 +38,7 @@ const Colors = () => {
           <p>
             Request URL {"-->"}
             <a
-              href="https://kick-api.herokuapp.com/api/colors"
+              href="hhttps://kick-api.onrender.com/api/colors"
               target="_blank"
               rel="noreferrer"
             >{` ${url}api/colors`}</a>
@@ -53,7 +57,7 @@ const Colors = () => {
           <p>
             Request URL {"-->"}
             <a
-              href="https://kick-api.herokuapp.com/api/colors/blue"
+              href="https://kick-api.onrender.com/api/colors/blue"
               target="_blank"
               rel="noreferrer"
             >{` ${url}api/colors/blue`}</a>

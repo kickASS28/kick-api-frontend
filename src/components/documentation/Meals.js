@@ -9,7 +9,9 @@ const Meals = () => {
 
   useEffect(() => {
     const fetchMeals = async () => {
-      const response = await axios.get("/api/meals");
+      const response = await axios.get(
+        "https://kick-api.onrender.com/api/meals"
+      );
       const meal = await JSON.stringify(response.data[0], null, 2);
       const data = await JSON.stringify(response.data, null, 2);
       setMeals(data);
@@ -27,7 +29,7 @@ const Meals = () => {
           <p>
             Request URL {"-->"}
             <a
-              href="https://kick-api.herokuapp.com/api/meals"
+              href="https://kick-api.onrender.com/api/meals"
               target="_blank"
               rel="noreferrer"
             >{` ${url}api/meals`}</a>
@@ -46,7 +48,7 @@ const Meals = () => {
           <p>
             Request URL {"-->"}
             <a
-              href="https://kick-api.herokuapp.com/api/meals/1"
+              href="https://kick-api.onrender.com/api/meals/1"
               target="_blank"
               rel="noreferrer"
             >{` ${url}api/meals/1`}</a>

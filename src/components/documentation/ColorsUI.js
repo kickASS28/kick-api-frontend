@@ -16,7 +16,7 @@ const ColorsUI = () => {
           <p>
             Request URL {"-->"}
             <a
-              href="https://kick-api.herokuapp.com/api/colorpage/sky%20blue"
+              href="https://kick-api.onrender.com/api/colorpage/sky%20blue"
               target="_blank"
               rel="noreferrer"
             >{` ${url}api/colorpage/sky blue`}</a>

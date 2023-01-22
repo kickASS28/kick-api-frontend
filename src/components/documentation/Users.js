@@ -9,7 +9,9 @@ const Users = () => {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const response = await axios.get("/api/users");
+      const response = await axios.get(
+        "https://kick-api.onrender.com/api/users"
+      );
       const user = await JSON.stringify(response.data[0], null, 2);
       const data = await JSON.stringify(response.data, null, 2);
       setUsers(data);
@@ -27,7 +29,7 @@ const Users = () => {
           <p>
             Request URL {"-->"}
             <a
-              href="https://kick-api.herokuapp.com/api/users"
+              href="https://kick-api.onrender.com/api/users"
               target="_blank"
               rel="noreferrer"
             >{` ${url}api/users`}</a>
@@ -46,7 +48,7 @@ const Users = () => {
           <p>
             Request URL {"-->"}
             <a
-              href="https://kick-api.herokuapp.com/api/users/1"
+              href="https://kick-api.onrender.com/api/users/1"
               target="_blank"
               rel="noreferrer"
             >{` ${url}api/users/1`}</a>

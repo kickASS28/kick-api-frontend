@@ -41,7 +41,9 @@ export function fetchComments() {
   return async (dispatch) => {
     dispatch(load());
     try {
-      const response = await axios.get("/comments");
+      const response = await axios.get(
+        "https://kick-api.onrender.com/comments"
+      );
       const data = await response.data;
       dispatch(setComments(data));
     } catch (error) {
@@ -55,7 +57,7 @@ export function postComments(Postdata) {
   return async (dispatch) => {
     dispatch(load());
     try {
-      await axios.post("/comments", Postdata);
+      await axios.post("https://kick-api.onrender.com/comments", Postdata);
       dispatch(add(Postdata));
     } catch (error) {
       dispatch(setError(error.message));

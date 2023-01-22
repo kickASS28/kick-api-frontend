@@ -43,7 +43,10 @@ export function fetchLogin(data) {
   return async (dispatch) => {
     dispatch(load());
     try {
-      const res = await axios.post("/auth/login", data);
+      const res = await axios.post(
+        "https://kick-api.onrender.com/auth/login",
+        data
+      );
       const ResData = await res.data;
       if (!ResData.ok) {
         dispatch(setError(ResData.error));
@@ -65,7 +68,10 @@ export function fetchSignup(data) {
   return async (dispatch) => {
     dispatch(load());
     try {
-      const res = await axios.post("/auth/signup", data);
+      const res = await axios.post(
+        "https://kick-api.onrender.com/auth/signup",
+        data
+      );
       const ResData = await res.data;
       if (!ResData.ok) {
         dispatch(setError(ResData.error));
